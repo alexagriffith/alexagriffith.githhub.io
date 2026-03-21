@@ -1,3 +1,9 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
 /* CSS Variables for Light/Dark Mode */
 :root {
   --primary-text: #56585b;
@@ -7,6 +13,8 @@
   --link-color: #007bff;
   --link-hover: #0056b3;
   --border-color: #ddd;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #333;
 }
 
 [data-bs-theme="dark"] {
@@ -17,6 +25,8 @@
   --link-color: #66b3ff;
   --link-hover: #99ccff;
   --border-color: #444;
+  --nav-bg: rgba(26, 26, 26, 0.95);
+  --nav-text: #e0e0e0;
 }
 
 /* Accessibility: Skip to content link */
@@ -118,5 +128,65 @@
 .article-clean .text figure img {
   margin-bottom: 12px;
   max-width: 100%;
+}
+
+/* Navigation Bar Styling */
+#mainNav {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+#mainNav .navbar-brand {
+  color: var(--nav-text);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#mainNav .navbar-brand:hover {
+  color: var(--link-color);
+}
+
+#mainNav .nav-link {
+  color: var(--nav-text);
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+#mainNav .nav-link:hover {
+  color: var(--link-color);
+}
+
+#mainNav #themeToggle {
+  border: none;
+  background: none;
+  color: var(--nav-text);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+#mainNav #themeToggle:hover {
+  color: var(--link-color);
+}
+
+#mainNav .navbar-toggler {
+  border-color: var(--border-color);
+}
+
+/* Year headers for talks section */
+.text h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-text);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width:768px) {
+  .text h3 {
+    font-size: 1.75rem;
+  }
 }
 
