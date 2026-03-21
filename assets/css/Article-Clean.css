@@ -105,17 +105,17 @@ html {
 }
 
 .article-clean .text h2 {
-  margin-top: 28px;
-  margin-bottom: 20px;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   line-height: 1.45;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 1.75rem;
+  font-weight: 700;
   color: var(--heading-color);
 }
 
 @media (min-width:768px) {
   .article-clean .text h2 {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
@@ -174,19 +174,20 @@ html {
   border-color: var(--border-color);
 }
 
-/* Year headers for talks section */
+/* Year headers for talks section and subsections */
 .text h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--secondary-text);
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 @media (min-width:768px) {
   .text h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
