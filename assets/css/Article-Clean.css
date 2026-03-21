@@ -1,3 +1,24 @@
+/* CSS Variables for Light/Dark Mode */
+:root {
+  --primary-text: #56585b;
+  --secondary-text: #929292;
+  --heading-color: #333;
+  --bg-color: #fff;
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+  --border-color: #ddd;
+}
+
+[data-bs-theme="dark"] {
+  --primary-text: #e0e0e0;
+  --secondary-text: #b0b0b0;
+  --heading-color: #f0f0f0;
+  --bg-color: #1a1a1a;
+  --link-color: #66b3ff;
+  --link-hover: #99ccff;
+  --border-color: #444;
+}
+
 /* Accessibility: Skip to content link */
 .skip-link {
   position: absolute;
@@ -15,10 +36,11 @@
 }
 
 .article-clean {
-  color: #56585b;
-  background-color: #fff;
+  color: var(--primary-text);
+  background-color: var(--bg-color);
   font-family: 'Lora', serif;
   font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .article-clean .intro {
@@ -36,7 +58,7 @@
 }
 
 .article-clean .intro p {
-  color: #929292;
+  color: var(--secondary-text);
   font-size: 12px;
 }
 
@@ -48,11 +70,11 @@
   text-transform: uppercase;
   padding: 4px 0 4px 10px;
   margin-left: 10px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid var(--border-color);
 }
 
 .article-clean .intro p a {
-  color: #333;
+  color: var(--heading-color);
   text-transform: uppercase;
   padding-left: 3px;
 }
@@ -78,7 +100,7 @@
   line-height: 1.45;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: var(--heading-color);
 }
 
 @media (min-width:768px) {
