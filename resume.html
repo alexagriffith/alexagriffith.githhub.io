@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Resume - Alexa Griffith</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Alexa Griffith - Resume. Senior Software Engineer at Bloomberg specializing in AI infrastructure and cloud-native platforms.">
+    <meta name="author" content="Alexa Griffith">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Alexa Griffith</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#organizations">Organizations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#talks">Talks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#writing">Writing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="personal.html">Personal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm" onclick="toggleTheme()" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-clean" role="main" id="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="intro">
+                        <h1 class="text-center">Alexa Griffith</h1>
+                        <p class="text-center">
+                            <a href="mailto:agriffith96@gmail.com">agriffith96@gmail.com</a> | New York, NY<br>
+                            <a href="https://linktr.ee/alexagriffith">LinkTree</a> |
+                            <a href="https://www.linkedin.com/in/alexa-griffith/">LinkedIn</a> |
+                            <a href="https://alexagriffith.com">Website</a>
+                        </p>
+                    </div>
+                    <div class="text">
+                        <h2>Summary</h2>
+                        <p>Software engineer specializing in large-scale AI inference systems and cloud-native infrastructure with a focus on building safe, observable, and evolvable AI systems in hybrid on-prem and cloud environments. I design and operate production GenAI platforms on Kubernetes, with experience in KServe, Envoy AI Gateway, and multi-cluster reliability. Active open-source contributor and CNCF community leader with multiple KubeCon/public talks and committee roles. Host and producer of Alexa's Input (AI), a podcast featuring engineers, founders, and open-source leaders.</p>
+
+                        <h2>Professional Experience</h2>
+
+                        <h3>Bloomberg <span style="float: right; font-weight: normal; font-size: 0.9em;">New York, NY</span></h3>
+                        <p><strong>Senior Software Engineer - Inference Platform Team</strong> <span style="float: right;">January 2022 - Present</span></p>
+                        <ul>
+                            <li>Lead engineer on Bloomberg's internal GenAI inference platform built on Kubernetes, KServe, and Envoy AI Gateway, powering production ML and LLM workloads across multiple clusters and environments.</li>
+                            <li>Designed and implemented core transformation logic in Envoy AI Gateway across providers, and multimodal/streaming/tool-calling use cases, enabling a single consistent API.</li>
+                            <li>Defined and implemented SLOs/SLIs and dashboards for the platform, deployment system, and user services creating Grafana dashboards and alerts used for ongoing reliability reviews and incident response. Led our Inference Platform Stability epic.</li>
+                            <li>Owned multiple DR-1 disaster-recovery test cycles for inference, including rebuilding clusters, documenting procedures, and coordinating cross-team response. Served as the representative for my team.</li>
+                            <li>Designed and rolled out GPU support and configurations for inference services, including scale-to-zero.</li>
+                            <li>Setup AWS EKS-based inference clusters (first clusters on cloud); configured to be compatible with on-prem, onboarded the team to Terraform-based pipelines, and designed OPA workflows and policies.</li>
+                            <li>Led multiple KServe upgrade and rollout efforts (0.9–0.15) across shared and dedicated clusters.</li>
+                            <li>Authored upstream KServe features and documentation for GenAI runtimes, model latency metrics, and canary rollouts; maintained KServe implementation and website contributions.</li>
+                            <li>Built and designed the deployment and debugging backend platform service and integrated it with our UI: new APIs for pod status, health, and information, significantly improving debuggability for internal users.</li>
+                            <li>Drove cross-team initiatives with SRE, product, and other platform teams regularly.</li>
+                        </ul>
+
+                        <h3>Bluecore <span style="float: right; font-weight: normal; font-size: 0.9em;">New York, NY</span></h3>
+                        <p><strong>Software Engineer 1.2 - Data Science & Analytics Infrastructure Teams</strong> <span style="float: right;">November 2019 - January 2022</span></p>
+                        <ul>
+                            <li>Decreased analytics UI response time by 95% (~2 minutes to sub-seconds) by leading a multi-quarter project for the design and development of a new gRPC-based Go API; main on-call for new & legacy systems.</li>
+                            <li>Pioneered the design and cross-team discussions for a standardized authentication and authorization service implementation for Bluecore's GKE-based microservices.</li>
+                            <li>Contributed crucial features such as database lock handling and a data generator service for our high throughput, low latency streaming architecture written in Python/Java.</li>
+                            <li>Created a SQL parser tool with a UI to visualize similarities in complex queries using d3/Python/JavaScript and consolidate 50% of the analytics endpoints.</li>
+                            <li>Managed Airflow infrastructure, added new features, and created optimized DAGs for ETL workflows.</li>
+                            <li>Led and designed Looker integration usage for Bluecore's UI used by 600+ clients & created self service features for users.</li>
+                        </ul>
+
+                        <h2>Open Source, Leadership & Activities</h2>
+                        <p style="margin-bottom: 0.5rem;"><em>See full list at <a href="https://alexagriffith.com">alexagriffith.com</a></em></p>
+
+                        <h3>Open Source</h3>
+                        <ul>
+                            <li>Core contributor to <strong>KServe</strong> (GenAI/LLM support, metrics, Helm, docs) and <strong>Envoy AI Gateway</strong> (multi-provider schema mapping, streaming, tools, reference architecture).</li>
+                            <li>Active participant in Kubernetes, CNCF, and AI-platform working groups.</li>
+                        </ul>
+
+                        <h3>Speaking & Writing</h3>
+                        <ul>
+                            <li>Conference speaker at: <strong>KubeCon EU/NA/JP/China, SRECon Dublin, KubeCrash, Grace Hopper</strong> and Bloomberg Developer Conference (BDC), with talks on GenAI platforms, KServe, SLOs/SRE for AI, and Kubernetes-based inference.</li>
+                            <li>Host of <strong>"Alexa's Input (AI)"</strong> podcast, interviewing engineers and open-source leaders (+50 episodes total; ~1 per month). Published on podcast apps, YouTube, and Substack blog. Notable guests include <strong>Kelsey Hightower, Joe Beda, Dan Walsh</strong>.</li>
+                            <li>Guest on <strong>MLOps</strong> and <strong>The Kubernetes Show</strong> podcasts; featured on MLOps newsletter.</li>
+                            <li>Authored:
+                                <ul>
+                                    <li><a href="https://www.cncf.io/blog/2025/06/18/announcing-kserve-v0-15-advancing-generative-ai-model-serving/">Building a Scalable, Flexible, Cloud-Native GenAI Platform with Open Source Solutions</a></li>
+                                    <li><a href="https://aigateway.envoyproxy.io/blog/envoy-ai-gateway-reference-architecture/">A Reference Architecture for Adopters of Envoy AI Gateway</a></li>
+                                    <li><a href="https://kserve.github.io/website/0.15/blog/articles/2025-05-27-KServe-0.15-release/">Announcing KServe v0.15: Advancing Generative AI Model Serving</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>CNCF & Industry Roles</h3>
+                        <ul>
+                            <li><strong>Technical Advisory Group (TAG) Infrastructure – Tech Lead</strong> (CNCF).</li>
+                            <li><strong>Program Committee Member:</strong> Cloud Native + Kubernetes AI Day EU 2026 & NA 2025, EnvoyCon (Virtual).</li>
+                            <li><strong>Lead SME</strong> for Cloud Native Platform Associate Advisory Council; Advisory Panel Member for Cloud Native Platform Engineer Advisory Council.</li>
+                        </ul>
+
+                        <h3>Internal Culture & Mentorship</h3>
+                        <ul>
+                            <li>Mentored interns and engineers interested in platform/inference work; ran debugging workshops and KServe training sessions across offices.</li>
+                            <li>Represent Bloomberg at recruitment events, Kubernetes meetups, and open-source showcases.</li>
+                        </ul>
+
+                        <h2>Technical Skills</h2>
+                        <ul>
+                            <li><strong>Languages:</strong> Go, Python</li>
+                            <li><strong>Cloud & Infra:</strong> Kubernetes, KServe, Envoy AI Gateway, Istio, Prometheus, Grafana, Helm, Terraform, Docker, Knative</li>
+                            <li><strong>Cloud Providers:</strong> AWS (EKS, Bedrock), GCP (GKE, Pub/Sub, BigQuery, Bigtable, CloudSQL, load balancers)</li>
+                            <li><strong>Data & Streaming:</strong> BigQuery/Bigtable, PostgreSQL, Kafka</li>
+                        </ul>
+
+                        <h2>Education</h2>
+                        <h3>University of Tennessee, Knoxville <span style="float: right; font-weight: normal; font-size: 0.9em;">2014 - 2019</span></h3>
+                        <p>
+                            <strong>B.S. in Honors Chemistry</strong>, American Chemical Society certified<br>
+                            Minor in Hispanic Studies<br>
+                            <em>Magna Cum Laude</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+</body>
+
+</html>
