@@ -190,3 +190,38 @@ html {
   }
 }
 
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Improved typography and spacing */
+.article-clean .text h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.article-clean .text ul {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.article-clean .text li {
+  margin-bottom: 0.75rem;
+}
+

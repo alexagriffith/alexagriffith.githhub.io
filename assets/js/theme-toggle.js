@@ -34,3 +34,15 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
     setTheme(e.matches ? 'dark' : 'light');
   }
 });
+
+// Back to top button visibility
+window.addEventListener('scroll', () => {
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  }
+});
