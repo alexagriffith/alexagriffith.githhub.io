@@ -650,3 +650,100 @@ iframe {
   display: block;
 }
 
+/* Mobile responsive improvements */
+@media (max-width: 767px) {
+  /* Reduce card padding on mobile */
+  .card-body {
+    padding: 1rem;
+  }
+
+  /* Stack project cards with better spacing */
+  .row.g-4 {
+    gap: 1rem !important;
+  }
+
+  /* Improve button sizing on mobile */
+  .btn-sm {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .card .btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Better hero image sizing */
+  .article-clean .intro img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Reduce heading sizes on mobile */
+  .article-clean .intro h1 {
+    font-size: 24px;
+  }
+
+  .article-clean .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .article-clean .text h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Social links better wrapping */
+  .social-links-container .d-flex {
+    gap: 0.5rem !important;
+  }
+
+  .social-links-container .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Podcast embed responsive */
+  .podcast-embed-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .podcast-embed-card iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Improve explore links on mobile */
+  .explore-links {
+    padding: 1rem;
+  }
+
+  .explore-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Better text spacing on mobile */
+  .article-clean .text p {
+    font-size: 15px;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-clean .text li {
+    font-size: 15px;
+  }
+
+  /* Collapsible section toggles */
+  .section-toggle {
+    font-size: 1.4rem;
+  }
+
+  /* Card titles */
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
