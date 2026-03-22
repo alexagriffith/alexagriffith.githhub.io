@@ -26,6 +26,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
     <link rel="stylesheet" href="assets/css/Article-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Prevent flash of light mode on page load -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') ||
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        })();
+    </script>
 </head>
 
 <body>
