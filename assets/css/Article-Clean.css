@@ -840,9 +840,22 @@ button.section-toggle {
   color: var(--heading-color);
 }
 
-/* Podcast entries follow the article's typography and spacing. */
-.article-clean .text .podcast-entry h3 { margin-top: 0; }
-.podcast-entry + .podcast-entry { margin-top: 2rem; }
-.article-clean .text .podcast-entry p { margin-bottom: 0.75rem; }
-.podcast-player { display: block; max-width: 100%; border: 0; margin: 1rem 0; }
-.article-clean .text .podcast-website { margin-bottom: 0; }
+/* Two balanced podcast cards, with a separate player below. */
+.podcast-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.podcast-cards .card-body { padding: 1.25rem; }
+
+.podcast-player { display: block; border: 0; max-width: 400px; margin: 0 auto; }
+@media (max-width: 575px) {
+  .podcast-cards { grid-template-columns: 1fr; }
+}
+
+.podcast-socials { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 0.5rem; }
+.article-clean .text .podcast-social {
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.3rem; min-width: 3rem; min-height: 3.25rem; padding: 0.5rem 0.4rem;
+  border: 1px solid var(--border-color); border-radius: 6px; text-decoration: none;
+}
+.podcast-social i { font-size: 1.05rem; }
+.podcast-social span { font-size: 0.65rem; }
+.podcast-social:hover { background: var(--card-bg); }
+.podcast-social:focus-visible { outline: 2px solid var(--link-color); outline-offset: 3px; }
