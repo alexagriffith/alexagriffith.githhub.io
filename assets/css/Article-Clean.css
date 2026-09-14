@@ -817,3 +817,25 @@ iframe {
   .find-me-table { font-size: 15px; }
   .find-me-table th { width: 7.5rem; padding-right: 0.75rem; }
 }
+
+button.section-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+}
+.about-toggle { width: 100%; }
+.experience-date { margin-left: auto; font-size: 0.75em; font-weight: 400; }
+.section-toggle:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
+@media (max-width: 480px) {
+  .about-toggle { flex-wrap: wrap; }
+  .experience-date { flex-basis: 100%; margin-left: 1.5rem; }
+}
+.article-clean .text h3.card-title {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: 0;
+  font-size: 1.25rem;
+  color: var(--heading-color);
+}
