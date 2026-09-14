@@ -839,3 +839,10 @@ button.section-toggle {
   font-size: 1.25rem;
   color: var(--heading-color);
 }
+
+/* Podcast entries follow the article's typography and spacing. */
+.article-clean .text .podcast-entry h3 { margin-top: 0; }
+.podcast-entry + .podcast-entry { margin-top: 2rem; }
+.article-clean .text .podcast-entry p { margin-bottom: 0.75rem; }
+.podcast-player { display: block; max-width: 100%; border: 0; margin: 1rem 0; }
+.article-clean .text .podcast-website { margin-bottom: 0; }
