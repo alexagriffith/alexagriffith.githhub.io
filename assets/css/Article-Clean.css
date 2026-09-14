@@ -789,9 +789,31 @@ iframe {
 }
 
 
-/* Use the surrounding paragraph typography for the compact links. */
-.find-me-links { margin-bottom: 1.5rem; }
-.article-clean .text .find-me-row { margin-bottom: 0.65rem; }
-.find-me-row strong { color: var(--heading-color); }
-.find-me-row a { display: inline-block; text-underline-offset: 3px; }
-.find-me-row a:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
+/* Compact link table, aligned with the page's body typography. */
+.find-me-table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.45;
+}
+.find-me-table th, .find-me-table td {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  vertical-align: top;
+}
+.find-me-table th {
+  width: 9rem;
+  padding-right: 1.25rem;
+  color: var(--heading-color);
+  font-weight: 700;
+}
+.find-me-table a { display: inline-block; text-underline-offset: 3px; }
+.find-me-table td span { margin: 0 0.35rem; }
+.find-me-table a:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
+@media (max-width: 767px) {
+  .find-me-table { font-size: 15px; }
+  .find-me-table th { width: 7.5rem; padding-right: 0.75rem; }
+}
