@@ -789,15 +789,9 @@ iframe {
 }
 
 
-/* Compact directory of social, podcast, and writing links. */
-.find-me-links { margin: 0 0 1.5rem; }
-.find-me-row { display: flex; align-items: baseline; gap: 1rem; margin: 0.35rem 0; }
-.find-me-label { flex: 0 0 7.5rem; color: var(--primary-text); font-weight: 600; }
-.find-me-destinations { display: flex; flex-wrap: wrap; gap: 0.15rem 1.15rem; }
-.find-me-destinations a, .find-me-all { display: inline-block; padding: 0.3rem 0; text-underline-offset: 3px; }
-.find-me-destinations a:focus-visible, .find-me-all:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
-.find-me-all { margin-top: 0.45rem; }
-@media (max-width: 480px) {
-  .find-me-row { flex-direction: column; gap: 0; margin-bottom: 0.65rem; }
-  .find-me-label { flex-basis: auto; }
-}
+/* Use the surrounding paragraph typography for the compact links. */
+.find-me-links { margin-bottom: 1.5rem; }
+.article-clean .text .find-me-row { margin-bottom: 0.65rem; }
+.find-me-row strong { color: var(--heading-color); }
+.find-me-row a { display: inline-block; text-underline-offset: 3px; }
+.find-me-row a:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
