@@ -842,14 +842,17 @@ button.section-toggle {
 
 /* Two balanced podcast cards, with a separate player below. */
 .podcast-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-.podcast-cards .card-body { padding: 1.25rem; }
+.podcast-cards .card-body { padding: 1.25rem; text-align: center; }
 
 .podcast-player { display: block; border: 0; max-width: 400px; margin: 0 auto; }
 @media (max-width: 575px) {
   .podcast-cards { grid-template-columns: 1fr; }
 }
 
-.podcast-socials { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 0.5rem; }
+.podcast-socials { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.5rem; margin: auto auto 0; padding-top: 0.5rem; width: 100%; max-width: 17rem; }
+.podcast-socials > a { grid-column: span 2; }
+.podcast-socials:has(> a:nth-child(5):last-child) > a:nth-child(4) { grid-column: 2 / span 2; }
+.podcast-socials > a:nth-child(5):last-child { grid-column: 4 / span 2; }
 .article-clean .text .podcast-social {
   display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 0.3rem; min-width: 3rem; min-height: 3.25rem; padding: 0.5rem 0.4rem;
