@@ -55,62 +55,91 @@
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alexa Griffith",
+  "alternateName": [
+    "Alexa Nicole Griffith"
+  ],
+  "jobTitle": "Senior Principal Software Engineer and Forward Deployed Engineer",
+  "description": "Alexa Griffith is a Senior Principal Software Engineer and Forward Deployed Engineer at Red Hat working on AI inference infrastructure. She hosts Alexa’s Input (AI) and co-hosts Attention Deficit with Taylor Dolezal.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Red Hat",
+    "sameAs": "https://www.redhat.com"
+  },
+  "url": "https://alexagriffith.com",
+  "image": "https://alexagriffith.com/assets/img/keynote-talking.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/in/alexa-griffith/",
+    "https://github.com/alexagriffith",
+    "https://x.com/alexa_griffith_",
+    "https://medium.com/@alexagriffith",
+    "https://linktr.ee/alexagriffith"
+  ],
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "AI Infrastructure",
+    "Machine Learning",
+    "GenAI",
+    "LLM Inference",
+    "Kubernetes",
+    "KServe",
+    "Cloud Native Computing",
+    "Distributed Systems",
+    "Software Engineering",
+    "Envoy Gateway",
+    "vLLM",
+    "Platform Engineering"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Software Engineer",
+    "occupationalCategory": "15-1252.00",
+    "skills": "AI Infrastructure, Kubernetes, Distributed Systems, Machine Learning, GenAI"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Tennessee, Knoxville",
+    "sameAs": "https://www.utk.edu"
+  },
+  "email": "alexa.nicole.griffith@gmail.com",
+  "award": [
+    "SETCA 2019 Poster Award"
+  ],
+  "@id": "https://alexagriffith.com/#person",
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Cloud Native Computing Foundation",
+    "url": "https://www.cncf.io/"
+  },
+  "subjectOf": [
     {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Alexa Griffith",
-      "alternateName": ["Alexa Nicole Griffith"],
-      "jobTitle": "Senior Principal Software Engineer",
-      "description": "Senior Principal Software Engineer specializing in AI infrastructure, cloud-native platforms, and machine learning systems at scale. CNCF TAG Infrastructure Tech Lead, KServe contributor, conference speaker, and technical podcast host.",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Red Hat",
-        "sameAs": "https://www.redhat.com"
-      },
-      "url": "https://alexagriffith.com",
-      "image": "https://alexagriffith.com/assets/img/keynote-talking.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/in/alexa-griffith/",
-        "https://github.com/alexagriffith",
-        "https://x.com/alexa_griffith_",
-        "https://www.youtube.com/@alexasinput",
-        "https://medium.com/@alexagriffith",
-        "https://alexasinput.substack.com",
-        "https://alexasinputai.com",
-        "https://linktr.ee/alexagriffith"
-      ],
-      "knowsAbout": [
-        "Artificial Intelligence",
-        "AI Infrastructure",
-        "Machine Learning",
-        "GenAI",
-        "LLM Inference",
-        "Kubernetes",
-        "KServe",
-        "Cloud Native Computing",
-        "Distributed Systems",
-        "Software Engineering",
-        "Envoy Gateway",
-        "vLLM",
-        "Platform Engineering"
-      ],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Software Engineer",
-        "occupationalCategory": "15-1252.00",
-        "skills": "AI Infrastructure, Kubernetes, Distributed Systems, Machine Learning, GenAI"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "University of Tennessee, Knoxville",
-        "sameAs": "https://www.utk.edu"
-      },
-      "email": "alexa.nicole.griffith@gmail.com",
-      "award": [
-        "CNCF TAG Infrastructure Tech Lead",
-        "SETCA 2019 Poster Award"
+      "@type": "PodcastSeries",
+      "name": "Alexa’s Input (AI)",
+      "url": "https://alexasinputai.com/",
+      "author": {
+        "@id": "https://alexagriffith.com/#person"
+      }
+    },
+    {
+      "@type": "PodcastSeries",
+      "name": "Attention Deficit",
+      "url": "https://www.attentiondeficit.ai/",
+      "author": [
+        {
+          "@id": "https://alexagriffith.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Taylor Dolezal",
+          "url": "https://onlydole.dev/"
+        }
       ]
     }
+  ]
+}
     </script>
 </head>
 
@@ -135,7 +164,7 @@
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="personal.html">Personal</a></li>
                     <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-primary btn-sm ms-2 px-3" href="https://linktr.ee/alexagriffith" target="_blank" rel="noopener"><i class="fas fa-link me-1"></i>All Links</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-primary btn-sm ms-2 px-3" href="https://alexagriffith.com/links/" target="_blank" rel="noopener"><i class="fas fa-link me-1"></i>All Links</a></li>
                     <li class="nav-item">
                         <button class="btn btn-sm" onclick="toggleTheme()" id="themeToggle" aria-label="Toggle dark mode">
                             <i class="fas fa-moon"></i>
@@ -151,11 +180,12 @@
             <div class="row">
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="intro">
+                        <h1>Alexa Griffith</h1>
                         <img class="img-fluid" src="assets/img/keynote-talking.jpg" alt="Alexa Griffith speaking at a conference">
                     </div>
                     <div class="text">
                         <h2 id="about">About Me</h2>
-                        <p> Welcome! I'm Alexa Griffith, a Senior Principal Software Engineer specializing in AI infrastructure and cloud-native platforms. I focus on building distributed systems for machine learning and gen AI inference at scale, working primarily on platform architecture and infrastructure reliability. Outside of work, I write technical posts and host a podcast called <a href="https://alexasinputai.com">Alexa's Input (AI)</a> (<a href="https://open.spotify.com/show/1tnV8Qk6SEw1Dr9Tqikr0H">Spotify</a>) where I interview leaders and innovators transforming the tech industry. </p>
+                        <p><!-- presence:bio:start -->I’m Alexa Griffith, a Senior Principal Software Engineer and Forward Deployed Engineer at Red Hat working on AI inference infrastructure. I host <a href="https://alexasinputai.com/">Alexa’s Input (AI)</a> and co-host <a href="https://www.attentiondeficit.ai/">Attention Deficit</a> with Taylor Dolezal. I also share technical writing, talks, and learning resources about distributed systems and cloud-native AI.<!-- presence:bio:end --></p>
 
                         <h3><button class="section-toggle about-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#redHatContent" aria-expanded="false" aria-controls="redHatContent"><i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i> Red Hat <span class="experience-date">April 2026 - Present</span></button></h3>
                         <div class="collapse" id="redHatContent">
@@ -183,7 +213,7 @@
                                 <tr><th scope="row">Connect</th><td><a href="https://www.linkedin.com/in/alexa-griffith/">LinkedIn</a> <span aria-hidden="true">·</span> <a href="https://x.com/alexa_griffith_">X</a> <span aria-hidden="true">·</span> <a href="https://www.instagram.com/alexasinput/">Instagram</a> <span aria-hidden="true">·</span> <a href="https://www.tiktok.com/@alexasinput">TikTok</a></td></tr>
                                 <tr><th scope="row">Listen &amp; watch</th><td><a href="https://alexasinputai.com">Alexa’s Input</a> <span aria-hidden="true">·</span> <a href="https://open.spotify.com/show/1tnV8Qk6SEw1Dr9Tqikr0H">Spotify</a> <span aria-hidden="true">·</span> <a href="https://www.youtube.com/@alexasinput">YouTube</a></td></tr>
                                 <tr><th scope="row">Read</th><td><a href="https://alexasinput.substack.com">Substack</a> <span aria-hidden="true">·</span> <a href="https://medium.com/@alexagriffith">Medium</a></td></tr>
-                                <tr><th scope="row">All links</th><td><a href="https://linktr.ee/alexagriffith">Linktree ↗</a></td></tr>
+                                <tr><th scope="row">All links</th><td><a href="https://alexagriffith.com/links/">All links ↗</a></td></tr>
                             </tbody>
                         </table>
 
@@ -193,7 +223,7 @@
                                 <div class="card-body">
                                     <h3 class="card-title" id="alexas-input-title">Alexa's Input (AI)</h3>
                                     <p>Conversations with engineers and open-source leaders.</p>
-                                    <p>Latest episode: <a href="https://alexasinput.substack.com/p/building-the-network-for-ai-agents">Building the Network for AI Agents with Yan Avlasov</a>.</p>
+                                    <!-- presence:latest-alexas-input:start --><p>Latest episode: <a href="https://alexasinput.substack.com/p/building-the-network-for-ai-agents">Building the Network for AI Agents with Yan Avlasov</a>.</p><!-- presence:latest-alexas-input:end -->
                                     <div class="podcast-socials" aria-label="Alexa&#x27;s Input links">
                                         <a href="https://alexasinputai.com" class="podcast-social" aria-label="Alexa&#x27;s Input on Website" title="Website"><i class="fas fa-globe" aria-hidden="true"></i><span>Website</span></a>
                                         <a href="https://www.tiktok.com/@alexasinput" class="podcast-social" aria-label="Alexa&#x27;s Input on TikTok" title="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i><span>TikTok</span></a>
@@ -207,8 +237,9 @@
                                 <div class="card-body">
                                     <h3 class="card-title" id="attention-deficit-title">Attention Deficit</h3>
                                     <p>Weekly AI news with Alexa Griffith and Taylor Dolezal.</p>
+                                    <!-- presence:latest-attention:start --><p>Latest episode: <a href="https://www.attentiondeficit.ai/episodes/ep008-gpt-6-luna-vs-sol-can-a-harness-close-the-gap">GPT-6 Luna vs Sol. Can a harness close the gap?</a>.</p><!-- presence:latest-attention:end -->
                                     <div class="podcast-socials" aria-label="Attention Deficit links">
-                                        <a href="https://attentiondeficit.ai" class="podcast-social" aria-label="Attention Deficit on Website" title="Website"><i class="fas fa-globe" aria-hidden="true"></i><span>Website</span></a>
+                                        <a href="https://www.attentiondeficit.ai/" class="podcast-social" aria-label="Attention Deficit on Website" title="Website"><i class="fas fa-globe" aria-hidden="true"></i><span>Website</span></a>
                                         <a href="https://www.youtube.com/@AttentionDeficitAI" class="podcast-social" aria-label="Attention Deficit on YouTube" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i><span>YouTube</span></a>
                                         <a href="https://attentiondeficitpod.substack.com" class="podcast-social" aria-label="Attention Deficit on Substack" title="Substack"><i class="fas fa-newspaper" aria-hidden="true"></i><span>Substack</span></a>
                                     </div>
@@ -238,7 +269,8 @@
                                 <li> <a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/"> Program Committee Member - AI + ML + Agentic AI + Data Systems Track (KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China 2026)  </a> </li>
                                 <li> <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/"> Program Committee Member - AI + ML Track (Kubecon Japan 2026)  </a> </li>
                                 <li> <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cloud-native-ai-kubeflow-day/"> Program Committee Member - Cloud Native AI + Kubeflow Day (Kubecon EU 2026)  </a> </li>
-                                <li> <a href="https://github.com/cncf/toc/issues/1656#issuecomment-3103602987"> Technical Advisory Group (TAG) Infrastructure Tech Lead - CNCF  </a> </li>
+                                <li><a href="https://contribute.cncf.io/community/tags/infrastructure/">Tech Lead, TAG Infrastructure — CNCF</a></li>
+                            <li><a href="https://www.cncf.io/announcements/2026/11/10/cncf-launches-certified-kubernetes-network-engineer-certification-ckne-to-advance-production-ready-networking-skills-for-ai-era/">Subject Matter Expert, Kubernetes AI Associate (KAIA) certification development — CNCF / Linux Foundation Education</a></li>
                                 <li> Advisory Panel Member - Cloud Native Platform Engineer (CNPE) Advisory Council </li>
                                 <li> <a href="https://community.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-virtual-envoycon-2025/"> Program Committee Member - EnvoyCon (Virtual) </a> </li>
                                 <li> <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cloud-native-kubernetes-ai-day/"> Program Committee Member - Cloud Native + Kubernetes AI Day (Kubecon NA 2025)  </a> </li>
@@ -268,7 +300,10 @@
 
                         <div class="collapse" id="talksContent">
                         <h3>2026</h3>
+                        <p><a href="/kubecon/">KubeCon North America 2026: slides and learning resources</a></p>
                         <ul>
+                            <li><a href="/kubecon/">Cache Me If You Can: LLM Inference with llm-d (with fun drawings)</a> — Alexa Griffith [KubeCon + CloudNativeCon North America]</li>
+                            <li><a href="/kubecon/">Cloud Native With a Chance of Tokens</a> — Alexa Griffith [KubeCon Learning Lounge TipTalk]</li>
                             <li> Fork Yeah: Choosing Your Own Adventure in Open Source - Alexa Griffith [Women+ in Open Source Forum, New York] </li>
                             <li> Embracing the Cringe: 7 Lessons from 70 Interviews - Alexa Griffith [Red Hat EMEA Remote Site Committee Lightning Talks] </li>
                             <li> <a href="https://www.meetup.com/new-york-site-reliability-engineering-tech-talks/events/313566093/?eventOrigin=group_calendar"> Dashboards & Dragons: Reliability Magic for AI Platforms - Alexa Griffith & Sal Furino </a> [Google SRE Meetup] </li>
@@ -318,8 +353,12 @@
                         <div class="collapse" id="writingContent">
                         <p><a href="https://developers.redhat.com/author/alexa-griffith" target="_blank" rel="noopener">All articles on Red Hat Developer <i class="fas fa-arrow-right"></i></a></p>
                         <ul>
-                            <li> <a href="https://developers.redhat.com/articles/2026/08/05/trace-kubernetes-resources-llm-d-model-serving"> Trace Kubernetes Resources for llm-d Model Serving </a> [August 2026] </li>
-                            <li> <a href="https://developers.redhat.com/articles/2026/06/16/red-hat-ai-inference-amazon-eks-kubernetes-resources"> Inside Red Hat AI Inference on EKS: Understanding the Kubernetes Resources </a> [June 2026] </li>
+                            <!-- presence:writing:start -->
+                            <li><a href="https://developers.redhat.com/articles/2026/08/27/llm-d-flow-control-priority-queuing-for-shared-gpu-inference">llm-d flow control: Priority queuing for shared GPU inference</a> [August 27, 2026]</li>
+                            <li><a href="https://developers.redhat.com/articles/2026/08/13/how-llm-d-routes-model-inference-traffic-amazon-eks">How llm-d routes model inference traffic on Amazon EKS</a> [August 13, 2026]</li>
+                            <!-- presence:writing:end -->
+                            <li> <a href="https://developers.redhat.com/articles/2026/08/05/trace-kubernetes-resources-llm-d-model-serving"> Trace Kubernetes resources for llm-d model serving </a> [August 5, 2026] </li>
+                            <li> <a href="https://developers.redhat.com/articles/2026/06/16/red-hat-ai-inference-amazon-eks-kubernetes-resources"> Red Hat AI Inference on Amazon EKS: Exploring the Kubernetes resources </a> [June 16, 2026] </li>
                             <li> <a href="https://theagentrouter.ai/blog/envoy-ai-gateway-reference-architecture/"> A Reference Architecture for Adopters of Envoy AI Gateway </a> [July 2025] </li>
                             <li> <a href="https://kserve.github.io/website/0.15/blog/articles/2025-05-27-KServe-0.15-release/"> Announcing KServe v0.15: Advancing Generative AI Model Serving </a> [June 2025] </li>
                             <li> <a href="https://news.mlops.community/deliveries/dgTGyQkDANjOA9fOAwGUK0pWE05LpZPjFUjGkr0="> Trend and Vibes for 2025 (MLOps newsletter feature) </a> [January 2025] </li>
