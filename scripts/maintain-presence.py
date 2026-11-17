@@ -123,8 +123,8 @@ def refresh(site):
     local_registry = json.loads((ROOT / "data/presence.json").read_text())
     registry = json.loads(fetch(REGISTRY_URL)) if site == "podcast" else local_registry
     links = registry["links"]
-    # Fetch and validate every input before writing anything. An unavailable or
-    # changed feed cannot empty a page or silently replace reviewed content.
+    # Validate each source before changing its section. Unavailable sources keep
+    # their last reviewed content and are explicitly reported as unverified.
     inputs = {
         "alexas_input": (feed, (links["alexas_rss"], "Alexa")),
         "attention": (feed, (links["attention_rss"], "Attention Deficit")),
@@ -132,31 +132,49 @@ def refresh(site):
     }
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         futures = {key: pool.submit(fn, *args) for key, (fn, args) in inputs.items()}
-        snapshots = {key: future.result() for key, future in futures.items()}
+        snapshots = {}
+        failures = {}
+        previous = ROOT / "data/published.json"
+        if previous.exists():
+            snapshots = json.loads(previous.read_text())
+        for key, future in futures.items():
+            try:
+                snapshots[key] = future.result()
+            except Exception as exc:
+                failures[key] = str(exc)
+                print("::warning::Published source unavailable; preserving " + key + ": " + str(exc))
+        write_json(ROOT / "reports/source-health.json", {"unverified_sources": failures})
     esc = lambda value: html.escape(value, quote=True)
     if site == "personal":
         path = ROOT / "index.html"
         source = path.read_text()
         for key, region in (("alexas_input", "latest-alexas-input"), ("attention", "latest-attention")):
+            if not snapshots.get(key):
+                continue
             ep = snapshots[key][0]
             body = '<p>Latest published episode: <a href="' + esc(ep["url"]) + '">' + esc(ep["title"]) + '</a> <time datetime="' + ep["date"] + '">(' + ep["date"] + ')</time>.</p>'
             source = replace_region(source, region, body)
         # Keep the historical archive; only the bounded recent-writing region
         # refreshes. Entries already outside that region are not duplicated.
         outside = replace_region(source, "writing", "")
-        recent = [a for a in snapshots["writing"] if a["url"] not in outside]
+        recent = [a for a in snapshots.get("writing", []) if a["url"] not in outside]
         body = "\n".join('<li><a href="' + esc(a["url"]) + '">' + esc(a["title"]) + '</a> [' + a["date"] + ']</li>' for a in recent)
-        source = replace_region(source, "writing", "\n" + body + "\n")
+        if snapshots.get("writing"):
+            source = replace_region(source, "writing", "\n" + body + "\n")
         if source != path.read_text():
             path.write_text(source)
     else:
         path = ROOT / "data/site.json"
         data = json.loads(path.read_text())
         data["bio"] = registry["podcasts"]["alexas_input"]["description"]
+        data["host_bio"] = registry["person"]["bio"]
         data["description"] = registry["podcasts"]["alexas_input"]["short_description"]
-        data["latest_published"] = snapshots["alexas_input"][0]
-        data["attention"]["episodes"] = snapshots["attention"][:3]
-        data["writing"] = snapshots["writing"]
+        if snapshots.get("alexas_input"):
+            data["latest_published"] = snapshots["alexas_input"][0]
+        if snapshots.get("attention"):
+            data["attention"]["episodes"] = snapshots["attention"][:3]
+        if snapshots.get("writing"):
+            data["writing"] = snapshots["writing"]
         for platform in data["platforms"]:
             keys = {"YouTube": "alexas_youtube", "Spotify": "alexas_spotify", "Apple Podcasts": "alexas_apple", "RSS": "alexas_rss", "Substack": "alexas_substack", "Instagram": "alexas_instagram", "TikTok": "alexas_tiktok", "X": "x"}
             if platform["name"] in keys:
@@ -241,6 +259,9 @@ def audit():
                 if result["result"] != "reachable":
                     out.write("- " + result["result"] + ": " + result["url"] + " (" + str(result.get("status", result.get("error"))) + ")\n")
             out.write("\nReachable: " + str(sum(r["result"] == "reachable" for r in results)) + "; total: " + str(len(results)) + ". Auth restrictions and rate limits are unverified, never counted as valid.\n")
+    for result in results:
+        if result["result"] != "reachable":
+            print(json.dumps(result))
     print(json.dumps({status: sum(r["result"] == status for r in results) for status in ("reachable", "broken", "unverified")}))
     if any(r["result"] == "broken" for r in results):
         raise SystemExit(1)
