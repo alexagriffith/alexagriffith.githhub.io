@@ -40,7 +40,7 @@ Alexa approves public bio, show-description and other wording changes before the
 Use the existing site fonts. No Kalam, Comic Sans or cursive font fallbacks. The automated personal-site check rejects them in HTML and CSS.
 
 ## Link page organization
-- `/links/` is the compact public entry: Podcasts (Listen, Watch, Socials), Connect, Writing & resources, and Personal & style.
+- `/links/` is the compact public entry: Podcasts (Listen, Watch, Socials), Connect, Writing & resources, and Personal.
 - `/links/listen/`, `/links/watch/` and `/links/socials/` hold the full podcast directories.
 - Talks goes to `/#talks`; the homepage keeps its existing session list and links to `/kubecon/` for KubeCon slides and resources.
 - Personal TikTok, Instagram and Pickle are distinct from the podcast accounts. X is intentionally shared between the business and personal sections.
