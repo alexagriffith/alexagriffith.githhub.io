@@ -23,7 +23,7 @@
   .arrow{margin-left:auto;font-weight:900;color:var(--ink);opacity:.35;font-size:20px;transition:opacity .14s,transform .14s}
   a.link:hover .arrow{opacity:1;transform:translateX(3px)}
   .feat .t{font-size:19px} .feat .ic{flex-basis:52px;height:52px}
-  footer{text-align:center;margin-top:34px;font-family:Kalam,cursive;color:var(--muted);font-size:16px}
+  footer{text-align:center;margin-top:34px;font-family:inherit;color:var(--muted);font-size:16px}
   footer a{color:var(--red);text-decoration:none;font-weight:700}
   .bg-red{background:var(--red)} .bg-purple{background:var(--purple)} .bg-teal{background:var(--teal)}
   .bg-green{background:var(--green)} .bg-ink{background:var(--ink)} .bg-gold{background:var(--gold);color:var(--ink)!important}

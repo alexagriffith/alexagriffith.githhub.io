@@ -33,3 +33,16 @@ Do not claim those are updated merely because website source was changed.
 Use https://alexagriffith.com/links/ as the owned, maintained hub. Keep Linktree alive for old bios and QR codes, with direct links to the same destinations when account access is available. No mass URL migration.
 
 Keep the old Blogger articles at their original URLs and dates. Add an archive/current-work notice when Blogger access is available. Do not automatically cross-post full articles to another destination: link to the original or use an explicitly approved canonical syndication process. A second manually maintained publication is not required.
+
+## Wording and design approval
+Alexa approves public bio, show-description and other wording changes before they are published. Show the exact current and proposed text and list the pages or accounts affected. Keep her voice and avoid generic promotional language. Factual link, metadata and small layout repairs remain within the authorized maintenance scope. Explicit label changes requested in chat are approved for that change only.
+
+Use the existing site fonts. No Kalam, Comic Sans or cursive font fallbacks. The automated personal-site check rejects them in HTML and CSS.
+
+## Link page organization
+- `/links/` is the compact public entry: Podcasts (Listen, Watch, Socials), Connect, Writing & resources, and Personal & style.
+- `/links/listen/`, `/links/watch/` and `/links/socials/` hold the full podcast directories.
+- Talks goes to `/#talks`; the homepage keeps its existing session list and links to `/kubecon/` for KubeCon slides and resources.
+- Personal TikTok, Instagram and Pickle are distinct from the podcast accounts. X is intentionally shared between the business and personal sections.
+- Edit destinations once in `data/presence.json`; edit placement and approved labels in `data/link-pages.json`. Run `python3 scripts/build-links.py`, then `python3 scripts/build-links.py --check`. Commit the generated pages together with those sources.
+- Daily checks prepare proposed changes and a link report; they do not apply or publish changes. Review wording before applying any proposed patch.

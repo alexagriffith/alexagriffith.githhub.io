@@ -47,7 +47,7 @@
         },
         {
           "key": "x",
-          "title": "X / Twitter",
+          "title": "X",
           "description": "@alexa_griffith_",
           "icon": "𝕏",
           "color": "ink"
@@ -65,9 +65,9 @@
       "title": "Writing & resources",
       "items": [
         {
-          "key": "kubecon",
-          "title": "KubeCon slides & resources",
-          "description": "Talk slides and inference learning tools",
+          "key": "talks",
+          "title": "Talks",
+          "description": "Slides & resources",
           "icon": "↗",
           "color": "purple"
         },
@@ -106,9 +106,23 @@
         },
         {
           "key": "personal_tiktok",
-          "title": "Style on TikTok",
+          "title": "TikTok",
           "description": "@alexainthecity_",
           "icon": "TT",
+          "color": "ink"
+        },
+        {
+          "key": "personal_instagram",
+          "title": "Instagram",
+          "description": "@alexagriffith",
+          "icon": "IG",
+          "color": "red"
+        },
+        {
+          "key": "x",
+          "title": "X",
+          "description": "@alexa_griffith_",
+          "icon": "𝕏",
           "color": "ink"
         }
       ]
@@ -313,7 +327,7 @@
             },
             {
               "key": "x",
-              "title": "X / Twitter",
+              "title": "X",
               "description": "@alexa_griffith_",
               "icon": "𝕏",
               "color": "ink"

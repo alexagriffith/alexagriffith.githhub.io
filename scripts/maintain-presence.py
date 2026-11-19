@@ -200,6 +200,12 @@ def check(site):
         for block in re.findall(r'<script type="application/ld\+json">([\s\S]*?)</script>', source):
             json.loads(block)
         assert "@lexal0u" not in source, filename + ": obsolete current social handle"
+    # Keep the approved site typography; reject handwritten font regressions.
+    if site == "personal":
+        for path in ROOT.rglob("*"):
+            if path.suffix not in (".html", ".css") or any(part in {".git", "_site", "reports"} for part in path.parts):
+                continue
+            assert not re.search(r"\bKalam\b|\bComic[\s_-]*Sans\b|font-family\s*:[^;}]*\bcursive\b", path.read_text(), re.I), str(path) + ": unapproved handwritten font"
     print("Public identity, canonical URLs, headings and structured data passed.")
 
 def package(site):

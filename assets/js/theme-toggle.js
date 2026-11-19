@@ -46,3 +46,14 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+// Reveal the existing Talks section when arriving from the links page.
+const revealLinkedTalks = () => {
+  if (!['#talks', '#talksContent'].includes(window.location.hash)) return;
+  const content = document.getElementById('talksContent');
+  const toggle = document.querySelector('[aria-controls="talksContent"]');
+  if (content) content.classList.add('show');
+  if (toggle) toggle.setAttribute('aria-expanded', 'true');
+};
+revealLinkedTalks();
+window.addEventListener('hashchange', revealLinkedTalks);
