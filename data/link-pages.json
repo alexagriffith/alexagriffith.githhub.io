@@ -1,0 +1,326 @@
+{
+  "root": [
+    {
+      "title": "Podcasts",
+      "description": "Alexa’s Input (AI) · Attention Deficit",
+      "compact": true,
+      "items": [
+        {
+          "key": "listen",
+          "title": "Listen",
+          "description": "Choose your podcast app",
+          "icon": "♫",
+          "color": "purple"
+        },
+        {
+          "key": "watch",
+          "title": "Watch",
+          "description": "Full video episodes",
+          "icon": "▶",
+          "color": "red"
+        },
+        {
+          "key": "socials",
+          "title": "Socials",
+          "description": "Clips & updates",
+          "icon": "✦",
+          "color": "teal"
+        }
+      ]
+    },
+    {
+      "title": "Connect",
+      "items": [
+        {
+          "key": "home",
+          "title": "Website",
+          "description": "Talks, projects & full portfolio",
+          "icon": "✦",
+          "color": "green"
+        },
+        {
+          "key": "linkedin",
+          "title": "LinkedIn",
+          "description": "Connect with Alexa",
+          "icon": "in",
+          "color": "teal"
+        },
+        {
+          "key": "x",
+          "title": "X / Twitter",
+          "description": "@alexa_griffith_",
+          "icon": "𝕏",
+          "color": "ink"
+        },
+        {
+          "key": "github",
+          "title": "GitHub",
+          "description": "Code & open-source projects",
+          "icon": "⌘",
+          "color": "ink"
+        }
+      ]
+    },
+    {
+      "title": "Writing & resources",
+      "items": [
+        {
+          "key": "kubecon",
+          "title": "KubeCon slides & resources",
+          "description": "Talk slides and inference learning tools",
+          "icon": "↗",
+          "color": "purple"
+        },
+        {
+          "key": "writing",
+          "title": "Red Hat Developer",
+          "description": "Articles on AI and inference",
+          "icon": "↗",
+          "color": "red"
+        },
+        {
+          "key": "alexas_substack",
+          "title": "Alexa’s Input on Substack",
+          "description": "Episode takeaways & writing",
+          "icon": "✎",
+          "color": "gold"
+        },
+        {
+          "key": "medium",
+          "title": "Medium",
+          "description": "Essays & earlier writing",
+          "icon": "M",
+          "color": "ink"
+        }
+      ]
+    },
+    {
+      "title": "Personal & style",
+      "items": [
+        {
+          "key": "pickle",
+          "title": "Rent my closet on Pickle",
+          "description": "@alexagriffith · gowns, bags & other fun pieces",
+          "icon": "✧",
+          "color": "green"
+        },
+        {
+          "key": "personal_tiktok",
+          "title": "Style on TikTok",
+          "description": "@alexainthecity_",
+          "icon": "TT",
+          "color": "ink"
+        }
+      ]
+    }
+  ],
+  "pages": {
+    "listen": {
+      "title": "Listen",
+      "description": "Listen to Alexa’s Input (AI) and Attention Deficit on Apple Podcasts, Spotify or RSS.",
+      "groups": [
+        {
+          "title": "Alexa’s Input (AI)",
+          "items": [
+            {
+              "key": "alexas_apple",
+              "title": "Apple Podcasts",
+              "description": "Listen in Apple Podcasts",
+              "icon": "↗",
+              "color": "purple"
+            },
+            {
+              "key": "alexas_spotify",
+              "title": "Spotify",
+              "description": "Listen in Spotify",
+              "icon": "♫",
+              "color": "green"
+            },
+            {
+              "key": "alexas_rss",
+              "title": "RSS feed",
+              "description": "Subscribe in your podcast app",
+              "icon": "RSS",
+              "color": "ink"
+            },
+            {
+              "key": "alexas_input",
+              "title": "Podcast website",
+              "description": "Episodes, writing & more",
+              "icon": "↗",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "title": "Attention Deficit",
+          "items": [
+            {
+              "key": "attention_apple",
+              "title": "Apple Podcasts",
+              "description": "Listen in Apple Podcasts",
+              "icon": "↗",
+              "color": "purple"
+            },
+            {
+              "key": "attention_spotify",
+              "title": "Spotify",
+              "description": "Listen in Spotify",
+              "icon": "♫",
+              "color": "green"
+            },
+            {
+              "key": "attention_rss",
+              "title": "RSS feed",
+              "description": "Subscribe in your podcast app",
+              "icon": "RSS",
+              "color": "ink"
+            },
+            {
+              "key": "attention_substack",
+              "title": "Substack",
+              "description": "Episodes & show notes",
+              "icon": "✎",
+              "color": "gold"
+            },
+            {
+              "key": "attention",
+              "title": "Podcast website",
+              "description": "Episodes & show resources",
+              "icon": "↗",
+              "color": "red"
+            }
+          ]
+        }
+      ]
+    },
+    "watch": {
+      "title": "Watch",
+      "description": "Watch full video episodes of Alexa’s Input (AI) and Attention Deficit.",
+      "groups": [
+        {
+          "title": "Alexa’s Input (AI)",
+          "items": [
+            {
+              "key": "alexas_youtube",
+              "title": "Watch on YouTube",
+              "description": "@alexasinput · full video conversations",
+              "icon": "▶",
+              "color": "red"
+            },
+            {
+              "key": "alexas_input",
+              "title": "Explore the show",
+              "description": "Episodes and takeaways",
+              "icon": "↗",
+              "color": "purple"
+            }
+          ]
+        },
+        {
+          "title": "Attention Deficit",
+          "items": [
+            {
+              "key": "attention_youtube",
+              "title": "Watch on YouTube",
+              "description": "@AttentionDeficitAI · full video episodes",
+              "icon": "▶",
+              "color": "red"
+            },
+            {
+              "key": "attention",
+              "title": "Explore the show",
+              "description": "Episodes and interactive resources",
+              "icon": "↗",
+              "color": "purple"
+            }
+          ]
+        }
+      ]
+    },
+    "socials": {
+      "title": "Podcast socials",
+      "description": "Follow Alexa’s Input (AI) and Attention Deficit for podcast clips, episodes and updates.",
+      "groups": [
+        {
+          "title": "Alexa’s Input (AI)",
+          "items": [
+            {
+              "key": "alexas_instagram",
+              "title": "Instagram",
+              "description": "@alexasinput · clips & conversations",
+              "icon": "IG",
+              "color": "red"
+            },
+            {
+              "key": "alexas_tiktok",
+              "title": "TikTok",
+              "description": "@alexasinput · podcast clips",
+              "icon": "TT",
+              "color": "ink"
+            },
+            {
+              "key": "alexas_youtube",
+              "title": "YouTube",
+              "description": "Episodes & Shorts",
+              "icon": "▶",
+              "color": "red"
+            },
+            {
+              "key": "alexas_substack",
+              "title": "Substack",
+              "description": "Episode takeaways & writing",
+              "icon": "✎",
+              "color": "gold"
+            }
+          ]
+        },
+        {
+          "title": "Attention Deficit",
+          "items": [
+            {
+              "key": "attention_youtube",
+              "title": "YouTube",
+              "description": "@AttentionDeficitAI",
+              "icon": "▶",
+              "color": "red"
+            },
+            {
+              "key": "attention_substack",
+              "title": "Substack",
+              "description": "Episodes, Notes & updates",
+              "icon": "✎",
+              "color": "gold"
+            },
+            {
+              "key": "attention",
+              "title": "Show website",
+              "description": "The show, segments & resources",
+              "icon": "↗",
+              "color": "purple"
+            }
+          ]
+        },
+        {
+          "title": "Connect with Alexa",
+          "items": [
+            {
+              "key": "linkedin",
+              "title": "LinkedIn",
+              "description": "Technical posts & conversations",
+              "icon": "in",
+              "color": "teal"
+            },
+            {
+              "key": "x",
+              "title": "X / Twitter",
+              "description": "@alexa_griffith_",
+              "icon": "𝕏",
+              "color": "ink"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

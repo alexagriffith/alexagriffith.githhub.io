@@ -190,7 +190,7 @@ def check(site):
     assert "Forward Deployed Engineer" in registry["person"]["jobTitle"]
     for value in registry["links"].values():
         https(value)
-    pages = ["index.html", "links/index.html", "kubecon/index.html"] if site == "personal" else ["index.html"]
+    pages = ["index.html", "links/index.html", "links/listen/index.html", "links/watch/index.html", "links/socials/index.html", "kubecon/index.html"] if site == "personal" else ["index.html"]
     for filename in pages:
         source = (ROOT / filename).read_text()
         assert len(re.findall(r"<h1(?:\s|>)", source)) == 1, filename + ": expected one main heading"

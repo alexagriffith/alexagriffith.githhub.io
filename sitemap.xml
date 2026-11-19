@@ -20,13 +20,28 @@
     </url>
     <url>
         <loc>https://alexagriffith.com/links/</loc>
-        <lastmod>2026-11-17</lastmod>
+        <lastmod>2026-11-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://alexagriffith.com/kubecon/</loc>
         <lastmod>2026-11-17</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://alexagriffith.com/links/listen/</loc>
+        <lastmod>2026-11-19</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://alexagriffith.com/links/watch/</loc>
+        <lastmod>2026-11-19</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://alexagriffith.com/links/socials/</loc>
+        <lastmod>2026-11-19</lastmod>
         <changefreq>monthly</changefreq>
     </url>
 </urlset>

@@ -18,7 +18,8 @@ jobs:
       - uses: actions/checkout@v7
       - name: Validate maintenance script and checked-in metadata
         run: |
-          python3 -m py_compile scripts/maintain-presence.py
+          python3 -m py_compile scripts/maintain-presence.py scripts/build-links.py
+          python3 scripts/build-links.py --check
           python3 scripts/maintain-presence.py --site personal
       - name: Prepare updates from public published sources
         run: python3 scripts/maintain-presence.py --site personal --refresh
