@@ -6,7 +6,7 @@ The existing URLs stay in place. No rebrand or new domain is required.
 - `data/presence.json` in the personal website is the canonical registry of approved names, host bios, profile URLs, show destinations and roles.
 - Keep the established Alexa's Input show description from Spotify for Creators. A shorter search description has its own field; it is not a replacement show bio.
 - `scripts/maintain-presence.py` reads only public, already-published feeds and the Red Hat Developer author page. It does not read email, private customer material or unpublished drafts.
-- The personal homepage updates only marked latest-episode and recent-writing regions. Historical writing, talks and layouts stay intact.
+- The personal homepage updates only the marked recent-writing region. Podcast cards keep durable show links and the Alexa’s Input player; episode highlights belong on the podcast sites. Historical writing, talks and layouts stay intact.
 - Alexa's Input retains its verified video gallery and refreshes the latest published release, related Attention Deficit releases and technical writing.
 - Attention Deficit already imports published Substack episodes via its existing validated workflow. Do not introduce a second episode registry or a competing importer there.
 

@@ -148,12 +148,6 @@ def refresh(site):
     if site == "personal":
         path = ROOT / "index.html"
         source = path.read_text()
-        for key, region in (("alexas_input", "latest-alexas-input"), ("attention", "latest-attention")):
-            if not snapshots.get(key):
-                continue
-            ep = snapshots[key][0]
-            body = '<p>Latest published episode: <a href="' + esc(ep["url"]) + '">' + esc(ep["title"]) + '</a> <time datetime="' + ep["date"] + '">(' + ep["date"] + ')</time>.</p>'
-            source = replace_region(source, region, body)
         # Keep the historical archive; only the bounded recent-writing region
         # refreshes. Entries already outside that region are not duplicated.
         outside = replace_region(source, "writing", "")
